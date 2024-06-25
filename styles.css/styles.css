@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/*fundo da tela*/
+body{
+    background:var(--preto);
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+/*botao de contato*/
+
+h2.titulo{
+    color:var(--branco);
+    font-size: 28px;
+    text-align: center;
+
+}
+
+h2.titulo span{
+    color:var(--verde-claro);
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px var(--verde);
+    transform: scale(1.05);
+}
+/* estilo do cabecario*/
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color:var(--cinza);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header nav.menu-desktop a:hover{
+    color:var(--branco);
+    transform: scale(1.10);
+}
+
+header nav.menu-desktop  ul{
+    list-style-type: none;
+}
+header nav.menu-desktop  ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTILO DO MENU MOBILE*/
+
+ .menu-mobile{
+    background-color:var(--preto);
+    height: 100vh;
+    position: fixed;
+    top:0;
+    right: 0;
+    z-index: 99999;
+    width:0%;
+    overflow:hidden;
+    transition: .5s;
+ } 
+
+ .menu-mobile.abrir-menu{
+    width:70%;
+ }
+ .menu-mobile.abrir-menu ~ .overley-menu{
+    display: block;
+ }
+
+ .menu-mobile .btn-fechar{
+    padding: 20px 4%;
+ }
+
+ .menu-mobile .btn-fechar i{
+    color:var(--verde);
+    font-size: 30px;
+ }
+
+
+ .menu-mobile nav ul{
+    text-align:right ;
+ }
+
+ .menu-mobile nav ul li a {
+    color: var(--branco);
+    font-size: 25px;
+    font-weight: 300;
+    padding: 10px 8%;
+    display: block;
+ }
+
+ .menu-mobile nav ul li a:hover{
+    background-color: var(--verde-claro);
+    color: var(--preto);
+
+ }
+ .overley-menu{
+    background-color: var(--preto);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+
+}
+/* estilo do topo do site*/
+section.topo-do-site{
+    padding: 40px 4%; 
+}
+
+section.topo-do-site.flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+/* titulo */
+.topo-do-site{
+    color: var(--prata);
+    font-size: 38px;
+}
+
+ /* ponto de exclamcao */
+.topo-do-site h1 span{
+   color:var(--dourado);
+}
+
+/*texto....*/
+.topo-do-site p{
+    color: var(--prata);
+    margin: 40px 0;
+    font-size: 30px;
+    margin-right: 400px;
+}
+
+/*ESTILO DAS ESPECIALIDADES*/
+
+section.especialidades{
+    padding: 40px 4%;
+
+}
+section.especialidades .flex{
+    gap: 60px;
+
+}
+.especialidades .especialidades-box{
+    color:var(--branco);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: .2s;
+}
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--cinza-claro);
+}
+
+
+.especialidades .especialidades-box i{
+    font-size: 48px;
+    color:var(--verde-claro);
+}
+.especialidades .especialidades-box h3{
+    font-size: 26px;
+    margin: 15px 0;
+}
+/* estilo do sobre */
+section.sobre{
+    padding: 40px 4%;
+
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+
+}
+
+.sobre .txt-sobre{
+    color:var(--branco);
+}
+.sobre .txt-sobre h2{
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre h2 span{
+    color:var(--verde-claro);
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color:var(--verde);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: .2s;
+}
+
+/*ESTILO DO PORTFOLIO*/
+section.Portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px var(--preto);
+
+}
+section.Portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 200px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8S;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+
+.overley{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--preto-acinzentado);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color:var(--branco);
+    opacity: 0;
+    transition: .5s;
+}
+.overley:hover{
+    opacity: 1;
+}
+section.formulario{
+    padding: 80px 4%;
+
+}
+
+form{
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: var(--preto-esfumacado);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: var(--branco);
+    font-size: 18px;
+}
+form textarea{
+    resize: none;
+    max-height: 200px;
+
+}
+
+form .btn-enviar{
+    margin-top: 10px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color:var(--verde);
+    color: var(--preto);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.formulario .interface{
+    margin-top: 40px;
+}
+
+/* ESTILO DO RODA PÉ*/
+ 
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px var(--preto);
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+
+}
+.borda{
+    border-top:2px solid var(--verde); 
+}
+footer .line-footer p i{
+    color:var(--prata);
+    font-size: 22px;
+
+}
+footer .line-footer p a{
+    color: var(--branco);
+}
+
+
+@media screen and (max-width: 1020px){
+
+
+    .flex{
+        flex-direction: column;
+    }
+      
+        /*texto....*/
+.topo-do-site p{
+    color:var(--prata);
+    margin: 40px 0;
+    font-size: 20PX;
+    margin-right: 40px;
+}
+    }
+
+   :root{
+
+    --preto:#000000;
+    --verde-claro:#00ff08;
+    --branco:#fff;
+    --verde:#21ee39;
+    --cinza:#7d7d7d;
+    --prata:#c0c0c0;
+    --dourado:#daa520;
+    --cinza-claro:#ffffff78;
+    --cinza-escuro:#ffffff1d;
+    --preto-acinzentado:#0000005c;
+    --preto-esfumacado:#242424;
+    --vermelho:#e50a0a;
+
+   } 
