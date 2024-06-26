@@ -178,11 +178,7 @@ section.sobre .flex{
 }
 
 /*ESTILO DO PORTFOLIO*/
-section.Portfolio {
-    padding: 80px 4%;
-    box-shadow: 0 0 40px 10px var(--cinza-escuro);
 
-}
 section.Portfolio .flex{
     justify-content: space-around;
     margin-top: 60px;
@@ -270,11 +266,7 @@ form .btn-enviar input{
 }
 
 /* ESTILO DO RODA PÃ‰*/
- 
-footer{
-    padding: 40px 4%;
-    box-shadow: 0 0 40px 10px var(--cinza-escuro);
-}
+
 
 footer .flex{
     justify-content: space-between;
