@@ -74,6 +74,70 @@ header nav.menu-desktop  ul li {
     padding: 0 40px;
 }
 
+.overlay-menu{
+    background-color: #0000008a;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+/* estilo do meu mobile */
+
+.menu-mobile{
+    background-color:#000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.btn-abrir-menu{
+    display: none;
+}
+
+@media screen and (max-width: 1020px){
+    .btn-abrir-menu{
+        display: block;
+    }
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 4%;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{ 
+    color: var(--branco);
+    font-size: 20px;
+    font-weight:300;
+    padding: 20px 5%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: var(--verde);
+    color: #000;
+}
 /* estilo do topo do site*/
 section.topo-do-site{
     padding: 40px 4%; 
@@ -84,6 +148,7 @@ section.topo-do-site.flex{
     justify-content: center;
     gap: 90px;
 }
+
 
 /* titulo */
 .topo-do-site{
@@ -114,6 +179,7 @@ section.especialidades .flex{
     gap: 60px;
 
 }
+
 .especialidades .especialidades-box{
     color:var(--branco);
     padding: 40px;
